@@ -1,12 +1,12 @@
-# Exercice 2 : filtrer le contenu à publier
+## Exercice 2 : filtrer le contenu à publier
 
 On va publier une carte montrant la proportion occupée par la production agricole bio par rapport à la surface totale, pour chaque commune du Gers, en 2020.
 
-## Sources de données
+### Sources de données
 Téléchargez le fichier https://www.data.gouv.fr/fr/datasets/surfaces-cheptels-et-nombre-doperateurs-bio-a-la-commune/. 
 
-## Déroulé
-### ogr2vrt_simple
+### Déroulé
+#### ogr2vrt_simple
 On va installer le script [ogr2vrt_simple](https://github.com/jeanpommier/ogr2vrt_simple).
 
 Windows ne nous facilite pas trop la vie pour le code python, surtout avec les bindings GDAL. C'est pourquoi **on va travailler dans linux WSL2 (debian)**.
@@ -23,7 +23,7 @@ Windows ne nous facilite pas trop la vie pour le code python, surtout avec les b
   - `(ogr2vrt_venv)` devrait apparaitre à gauche du prompt
 - on installe ogr2vrt_simple : suivre les instructions d'installation de https://github.com/jeanpommier/ogr2vrt_simple
 
-## Générer le VRT
+### Générer le VRT
 
 Utilisez la même commande pour générer votre VRT pour la donnée bio. Puis éditez-le dans un éditeur de texte.
 
@@ -34,3 +34,7 @@ Utilisez la même commande pour générer votre VRT pour la donnée bio. Puis é
 - puis jointure avec les limites administratives du Gers (on pourra prendre la couche geo dans  [../demos/union/communes3247.vrt](../demos/union/communes3247.vrt) )
 - et affichage carto
 
+
+---
+
+*[Exercice suivant](exercice3.md)*

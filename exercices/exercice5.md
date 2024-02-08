@@ -1,9 +1,9 @@
-# Exercice 5 : prendre un fichier distant pour source
+## Exercice 5 : prendre un fichier distant pour source
 
-## Sources de données
+### Sources de données
 Reprenons notre donnée de l'exercice 2. Faire évoluer la définition de la source pour utiliser directement une URL.
 
-## Déroulé
+### Déroulé
 _Indice_ : on utilisera `vsicurl` (https://gdal.org/user/virtual_file_systems.html)
 
 A noter que si besoin, on peut même chainer avec un dézippage (`viszip`, `vsigz`).
@@ -19,3 +19,7 @@ _**Votre donnée doit pouvoir s'afficher dans QGIS.**_
 
 _Vous pouvez aussi recourir à ogr2vrt_simple, qui doit pouvoir générer une définition fonctionnelle de source en mode vsicurl._
 
+
+---
+
+*[Exercice suivant](exercice6.md)*

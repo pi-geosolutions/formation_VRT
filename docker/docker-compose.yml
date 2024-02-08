@@ -1,0 +1,30 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+volumes:
+  cpgeom2024_postgis_data:
+  cpgeom2024_geoserver_datadir:
+
+services:
+  db:
+    image: postgis/postgis
+    ports: 
+      - "5432:5432"
+    restart: always
+    environment:
+      - POSTGRES_USER=cpgeom
+      - POSTGRES_PASSWORD=secret
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - cpgeom2024_postgis_data:/var/lib/postgresql/data
+
+  # geoserver:
+  #   image: docker.osgeo.org/geoserver:2.25.x
+  #   ports:
+  #     - "8085:8080"
+  #   environment:
+  #     - INSTALL_EXTENSIONS=true
+  #     - STABLE_EXTENSIONS=css
+  #   volumes:
+  #     - cpgeom2024_geoserver_datadir:/opt/geoserver_data
+  #   restart: unless-stopped

@@ -7,6 +7,7 @@ On l’a dans union/
 
 ### Objectif pédagogique
 Démontrer comment le VRT permet de :
+
 - filtrer sur une valeur attributaire
 - rassembler plusieurs jeux de données, y compris geo
 - rajouter du contenu
@@ -40,26 +41,26 @@ Je décommente hello et on regarde ça dans la table attributaire.
 https://www.data.gouv.fr/fr/datasets/achats-de-pesticides-par-code-postal/
 https://www.data.gouv.fr/fr/datasets/codes-postaux-de-toulouse/
 
-On produit une donnée geospatiale des contours de chaque code postal (join + ST_Union)
-
 Données dans pesticides/
 
 ### Objectif pédagogique
 Démontrer comment le VRT permet de :
-générer un “geopackage virtuel” rassemblant des ressources variées
-assurer une reproductibilité. Le process est documenté et facile à dupliquer
-récupérer une ressource directement en ligne si on veut
+
+- générer un “geopackage virtuel” rassemblant des ressources variées
+- assurer une reproductibilité. Le process est documenté et facile à dupliquer
+- récupérer une ressource directement en ligne si on veut
 
 ### Objectif de la manip
 Faire une carte de la qté de glyphosate achetée par code postal sur les environs de Toulouse (on pourrait aussi utiliser les limites admin du Gers). On a des données sur plusieurs années donc on peut cartographier l’évolution
 Les fichiers de travail sont dans exp/
 ```xml
-    <OGRVRTLayer name="bnvd_occitanie_2021">
-        <SrcDataSource relativeToVRT="1">BNVD_TRACABILITE_20221016_ACHAT_CP_SUBSTANCE_OCCITANIE_2021.csv</SrcDataSource>
-        <SrcSql dialect="sqlite">SELECT code_postal_acheteur, substance, SUM(CAST(quantite_substance as decimal)) AS qte from (SELECT * FROM BNVD_TRACABILITE_20221016_ACHAT_CP_SUBSTANCE_OCCITANIE_2021 WHERE substance='glyphosate') GROUP BY code_postal_acheteur</SrcSql>
-    </OGRVRTLayer>
+<OGRVRTLayer name="bnvd_occitanie_2021">
+    <SrcDataSource relativeToVRT="1">BNVD_TRACABILITE_20221016_ACHAT_CP_SUBSTANCE_OCCITANIE_2021.csv
+    </SrcDataSource>
+    <SrcSql dialect="sqlite">SELECT code_postal_acheteur, substance, SUM(CAST(quantite_substance as decimal)) AS qte FROM (SELECT * FROM BNVD_TRACABILITE_20221016_ACHAT_CP_SUBSTANCE_OCCITANIE_2021 WHERE substance='glyphosate') GROUP BY code_postal_acheteu</SrcSql>
+</OGRVRTLayer>
 ```
-on somme les données pour la substance glyphosate
+On somme les données pour la substance glyphosate
 
 ### Déroulé
 
