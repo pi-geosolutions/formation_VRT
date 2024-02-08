@@ -4,3 +4,7 @@ Avant de quitter votre ordi, prenez le temps de stopper votre service cron si vo
 ```
 sudo service cron stop
 ```
+
+---
+
+*[Lien suivant](../auto.md)*
