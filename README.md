@@ -25,7 +25,6 @@ A noter que le format PDF n'est guère adapté aux copier-coller, en particulier
     - vous faites comment, vous, l'intégration de données ?
     - comment faciliter la vie de vos collègues non techniques ?
 1. [démos](demos/README.md)
-1. [Présentation rapide de la librairie GDAL/OGR](https://gdal.org/)
-1. [Présentation du format VRT](https://gdal.org/drivers/vector/vrt.html)
+1. [Présentation rapide de la librairie GDAL/OGR et du format VRT](ogr_et_vrt.md)
 1. [Exploration de fichiers VRT](samples/README.md)
 1. [Exercices accompagnés : génération et usage de fichiers VRT](exercices/README.md)
