@@ -1,0 +1,13 @@
+<OGRVRTDataSource>
+  <OGRVRTLayer name="locations">
+    <SrcDataSource relativeToVRT="1" shared="1">locations.csv</SrcDataSource>
+    <SrcLayer>locations</SrcLayer>
+    <Field name="city" type="String" src="CITY"/>
+    <Field name="number" type="Integer" src="NUMBER"/>
+    <Field name="year" type="Integer" src="YEAR"/>
+    <GeometryType>wkbPoint</GeometryType>
+    <LayerSRS>WGS84</LayerSRS>
+    <GeometryField encoding="PointFromColumns" x="LON" y="LAT"/>
+  </OGRVRTLayer>
+
+</OGRVRTDataSource>
