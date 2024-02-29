@@ -1,7 +1,7 @@
 # Formation VRT
 _Jean Pommier, jean.pommier@pi-geosolutions.fr_
 
-_[IdGeo](https://www.idgeo.fr/), 9 février 2024_
+_[IdGeo](https://www.idgeo.fr/), 1er mars 2024_
 
 ---
 

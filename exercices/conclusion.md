@@ -7,4 +7,4 @@ sudo service cron stop
 
 ---
 
-*[Lien suivant](../auto.md)*
+*[Lien suivant](./auto.md)*

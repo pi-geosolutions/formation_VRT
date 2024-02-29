@@ -20,11 +20,19 @@ Exercices :
 On peut regarder qq cas concrets dans lesquels le VRT m'a bien servi et fait gagner beaucoup de temps :
 
 - https://github.com/pi-geosolutions/vrt2rdf
-- un cas de réorganisation des données, pour le projet [SAGUI](https://sagui.hydro-matters.fr/sagui/)
+- un cas de réorganisation des données, pour le projet SAGUI : https://github.com/HydroMetGuyane-Hydro-Matters/sagui_backend/tree/main/data
+- les VRT utilisés couramment par l'équipe SIG de la région des Hauts de France : https://github.com/geo2france/vrt/
 
 Combiné à un peu de code python, on peut faire des miracles en termes de traitement de données.
 
 Ah, et j'oubliais : remarquez dans la doc de vrt2rdf comment on peut même [pointer vers une source WFS](https://github.com/pi-geosolutions/vrt2rdf#connect-any-data-source-using-the-vrt)
+
+## Exercice en autonomie (déposer le résultat sur Digiforma):
+
+On finira par un exercice en autonomie, pour l'évaluation digiforma : 
+(sur la version PDF de ce document, ce lien ne marchera pas. Vous trouverez l'exercice en fin de document)
+
+[Exercice en autonomie](./auto.md)
 
 
 ## Nettoyage
