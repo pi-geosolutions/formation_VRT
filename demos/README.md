@@ -1,5 +1,7 @@
 # Démos
 
+*Dossier `demos`*
+
 Dézipper les deux archives zip avant usage.
 
 ## Union de données géospatiales
@@ -44,6 +46,7 @@ https://www.data.gouv.fr/fr/datasets/codes-postaux-de-toulouse/
 Données dans pesticides/
 
 ### Objectif pédagogique
+
 Démontrer comment le VRT permet de :
 
 - générer un “geopackage virtuel” rassemblant des ressources variées

@@ -1,5 +1,7 @@
 # Echantillons
 
+*Dossier `samples/`*
+
 Voilà quelques VRT échantillons qu'on pourra utiliser pour explorer.
 
 On peut :
@@ -10,4 +12,4 @@ On peut :
   - lister les infos avec `ogrinfo -so -al`
   - afficher le contenu au format CSV avec `ogr2ogr -f CSV /stdout/ monfichier.vrt`
 
-  
+On pourra aussi regarder des VRTs sur https://github.com/geo2france/vrt.

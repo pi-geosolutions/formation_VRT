@@ -9,6 +9,8 @@ _Sources : https://github.com/pi-geosolutions/formation_VRT/tree/cpgeom202402_
 
 ---
 
+\vspace{2cm}
+
 Ce cours a pour objectif de vous faire découvrir un format particulier de la librairie OGR, le format VRT. Ce format de donnée virtuelle permet de faire beaucoup de choses et dans bien des cas de se passer d'un ETL.
 
 ## Préambule
