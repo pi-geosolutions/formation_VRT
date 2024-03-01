@@ -93,7 +93,7 @@ QQ commandes très fréquemment utilisées :
 ### Afficher dans la console le contenu de la couche
 Pratique pour explorer le contenu d'une donnée
 ```
-ogr2ogr -f CSV /stdout/ monfichier.gpkg couche1
+ogr2ogr -f CSV /vsistdout/ monfichier.gpkg couche1
 ```
 
 ### Publier une donnée en base (postgresql).
