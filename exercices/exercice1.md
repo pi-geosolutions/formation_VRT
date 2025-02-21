@@ -28,7 +28,7 @@ Retouchez un peu le VRT si nécessaire pour le rendre plus compatible avec les c
 
 _Attention :_  pour la jointure, vous allez avoir un pb avec les numéros de départements. Pourquoi ?
 
-C'est une erreur classique, qu'il est important de avoir résoudre. On peut le faire à différents niveaux. Dans ce cas ci, on va le faire côté postgresql. Il existe une commande SQL, `LPAD` qui devrait faire votre affaire.
+C'est une erreur classique, qu'il est important de savoir résoudre. On peut le faire à différents niveaux. Dans ce cas ci, on va le faire côté postgresql. Il existe une commande SQL, `LPAD` qui devrait faire votre affaire.
 
 _**Faites une copie d'écran de la carte obtenue, pour le livrable de cet exercice.**_
 

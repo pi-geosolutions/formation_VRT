@@ -17,11 +17,9 @@ Démontrer comment le VRT permet de :
 ### Objectif de la manip
 Produire une carte des communes du Gers + Lot et Garonne, sans doublons.
 
-Le pb m’avait été soumis par F., élève CQPGeom. Ils avaient récupéré des extractions admin express par département. Sauf que à chaque fois, ils avaient en bonus les communes limitrophes. Après avoir importé les deux shp dans la BD, ils avaient donc des doublons. Voire des erreurs si contrainte d’unicité.
+Le pb m’avait été soumis par F., élève CQPGeom. Ils avaient récupéré des extractions BD topo par département. Sauf que à chaque fois, ils avaient en bonus les communes limitrophes. Après avoir importé les deux shp dans la BD, ils avaient donc des doublons. Voire des erreurs si contrainte d’unicité.
 
 Ils avaient passé plusieurs jours à trouver comment éviter les doublons. Je leur ai trouvé une solution en 15 min en fin de cours.
-
-Malheureusement, je ne sais pas où il a récupéré ces extractions par dept, je ne les trouve pas.
 
 En bonus, j’ai en commentaire dans le VRT l’ajout d’un champ texte avec concaténation, pour le Gers (hello). 
 
@@ -55,12 +53,12 @@ Démontrer comment le VRT permet de :
 
 ### Objectif de la manip
 Faire une carte de la qté de glyphosate achetée par code postal sur les environs de Toulouse (on pourrait aussi utiliser les limites admin du Gers). On a des données sur plusieurs années donc on peut cartographier l’évolution
-Les fichiers de travail sont dans exp/
+
 ```xml
 <OGRVRTLayer name="bnvd_occitanie_2021">
     <SrcDataSource relativeToVRT="1">BNVD_TRACABILITE_20221016_ACHAT_CP_SUBSTANCE_OCCITANIE_2021.csv
     </SrcDataSource>
-    <SrcSql dialect="sqlite">SELECT code_postal_acheteur, substance, SUM(CAST(quantite_substance as decimal)) AS qte FROM (SELECT * FROM BNVD_TRACABILITE_20221016_ACHAT_CP_SUBSTANCE_OCCITANIE_2021 WHERE substance='glyphosate') GROUP BY code_postal_acheteu</SrcSql>
+    <SrcSql dialect="sqlite">SELECT code_postal_acheteur, substance, SUM(CAST(quantite_substance as decimal)) AS qte FROM (SELECT * FROM BNVD_TRACABILITE_20221016_ACHAT_CP_SUBSTANCE_OCCITANIE_2021 WHERE substance='glyphosate') GROUP BY code_postal_acheteur</SrcSql>
 </OGRVRTLayer>
 ```
 On somme les données pour la substance glyphosate

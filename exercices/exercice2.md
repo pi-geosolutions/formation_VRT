@@ -15,7 +15,7 @@ Windows ne nous facilite pas trop la vie pour le code python, surtout avec les b
 - vérifier si gdal/ogr est installé : `ogrinfo --version`
 - si vous avez une erreur, c'est que non, donc on va l'installer : 
   - on met à jour la liste des paquets : `sudo apt update`
-  - on installe GDAL/OGR : `sudo apt install gdal-bin`
+  - on installe GDAL/OGR : `sudo apt install gdal-bin libgdal-dev`
 - on va vérifier votre version de python, on veut > 3.8 : `python3 --version`
 - on crée un environnement virtuel, afin de cloisonner nos installations de paquets python : 
   - `python3 -m venv ogr2vrt_venv`

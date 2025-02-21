@@ -25,7 +25,14 @@ A noter que le format PDF n'est guère adapté aux copier-coller, en particulier
 
 1. Tour de table : 
     - vous faites comment, vous, l'intégration de données ?
+        - Vous arrive-t-il de charger des fichiers en base de donnée ?
+        - Quels outils utilisez-vous ?
+        - Quelles difficultés rencontrez-vous ?
     - comment faciliter la vie de vos collègues non techniques ?
+        - Rencontrez-vous des problèmes d'interopérabilité entre leurs outils logiciels et les vôtres ?
+        - Que faites-vous si vous devez publier un ficher Excel ?
+        - Et si le contenu de ce fichier devait être maintenu à jour dans une base de données ?
+        - Comment assurez-vous la reproductibilité de vos process de publication ?
 1. [démos](demos/README.md)
 1. [Présentation rapide de la librairie GDAL/OGR et du format VRT](ogr_et_vrt.md)
 1. [Exploration de fichiers VRT](samples/README.md)
