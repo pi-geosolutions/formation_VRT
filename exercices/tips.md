@@ -2,11 +2,28 @@
 
 ## Connexion à la base de données
 
-On utilisera la composition docker utilisée pour la formation GeoServer. Soit localement, soit sur le serveur distant sk2.
+On utilisera la base de donnée servie sur l'ordi du formateur (s'appuyer sur docker/docker-compose.yml). 
 
-Localement, cela devrait se faire sans souci, la BD sera accessible depuis votre machine directement.
+Les paramètres de connexion seront es suivants : 
+- hôte : IP à voir en fonction de la config réseau
+- port : `5432` 
+- user: `cpgeom`
+- mot de passe: `secret`
+- schema : vous créerez un schema qui vous sera propre : première lettre du prénom suivi du nom de famille (dans mon cas par exemple : `jpommier`)
 
-Si on cible la BD hébergée sur sk2, elle n'est pas accessible de l'extérieur, uniquement depuis sk2 lui-même. On devra donc ouvrir un *tunnel SSH*, qui nous permettra de faire correspondre un port de notre machine (localhost) avec le port 5432 de la machine *comme si on était dessus*, via une connection cryptée SSH.
+Oui, je sais. Ce n'est absolument pas sécurisé. Ce n'est en effet pas un cours sur les bases de données, plutôt sur l'étape en amont (publication/transfo des données).
+
+### *Pour info*, cas d'une connexion à une BD distante, sécurisée, accès via tunnel ssh
+
+En général, vous ne pourrez pas accéder directement à une BD externe sur le port 5432. En effet, pour que cela soit possible en sécurité, cela implique de configurer une connexion cryptée, à minima. Et malgré tout, la BD reste un peu exposée.
+
+En général, ce qui se fait, c'est de maintenir la BD dans un réseau interne, qui n'est pas accessible directement depuis internet. Ensuite, trois options : 
+1. ben... pas d'accès externe du tout. Pas pratique, mais le plus secure.
+2. accès via un VPN
+3. accès via un tunnel SSH. Dans ce cas, un accès SSH sur une machine du réseau interne est possible. Cette machine pouvant elle-même accéder à la BD. Dans ce cas, on peut configurer ce qu'on appelle un *tunnel SSH* : une connexion sécurisée est établie entre votre PC et la machine SSH, avec une configuration permettant de relier la BD *à travers* ce tunnel. On joue à saute-moutons si vous voulez.
+
+
+Le tunnel SSH, nous permettra de faire correspondre un port de notre machine (localhost) avec le port 5432 de la machine *comme si on était dessus*, via une connection cryptée SSH.
 
 La commande est la suivante :
 ```

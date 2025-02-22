@@ -3,7 +3,7 @@
 ---
 
 > **Livrable attendu**
-> Sur cet exercice, je vous demanderai de déposer sur digiforma votre fichier vrt. Pas de panique, on va le dérouler ensemble, mais suivez bien, et n'hésitez pas à poser des questions.
+> Sur cet exercice, je vous demanderai de déposer sur digiforma votre fichier vrt. 
 >
 > Nommage attendu : nom_auto_bnlc.vrt
 
@@ -14,6 +14,7 @@ https://transport.data.gouv.fr/datasets/base-nationale-des-lieux-de-covoiturage/
 
 ### Déroulé
 Vous allez générer un fichier VRT qui remplira les conditions suivantes:
+
 - types de champs corrects
 - le résultat doit être un fichier géospatial
 - pas de téléchargement, on utilise l'URL (vsicurl)

@@ -2,7 +2,8 @@
 
 ***Nous allons faire cet exercice ensemble.***
 
-Google Sheet est capable d'exposer son contenu sur le web au format CSV : Fichier->Partager->Publier sur le web. Il faut bien faire attention à 
+Google Sheet est capable d'exposer son contenu sur le web au format CSV :   Fichier->Partager->Publier sur le web.  
+Il faut bien faire attention à 
 
 - définir un lien pour le document complet, pas juste la feuille
 - choisir un format CSV

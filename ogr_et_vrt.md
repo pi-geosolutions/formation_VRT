@@ -114,10 +114,13 @@ export PGHOST=localhost
 On aurait aussi pu écrire un fichier .pgpass comme documenté dans https://docs.postgresql.fr/10/libpq-pgpass.html.
 
 ```
-ogr2ogr -progress -f PostgreSQL PG:"host='$PGHOST' user='$PGUSER' dbname='$PGDATABASE'" -nln "roads" -nlt PROMOTE_TO_MULTI -lco OVERWRITE=YES -lco SCHEMA=destschema monfichier.gpkg couche1
+ogr2ogr -progress -f PostgreSQL PG:"host='$PGHOST' user='$PGUSER' dbname='$PGDATABASE'" \ 
+  -nln "roads" -nlt PROMOTE_TO_MULTI -lco OVERWRITE=YES \
+  -lco SCHEMA=destschema monfichier.gpkg couche1
 ```
 
 Ici, on a utilisé qq options en plus :
+
   - `-nln` pour nommer la table
   - `-lco OVERWRITE=YES` pour remplacer le contenu
   - `-lco SCHEMA=destschema` pour désigner le schema de destination (et ne pas publier dans `public`)

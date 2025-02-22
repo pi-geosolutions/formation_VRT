@@ -8,11 +8,13 @@ _Indice_ : on utilisera `vsicurl` (https://gdal.org/user/virtual_file_systems.ht
 
 A noter que si besoin, on peut même chainer avec un dézippage (`viszip`, `vsigz`).
 
-On pourra s'inspirer de l'article https://static.geotribu.fr/articles/2021/2021-09-07_traiter_fichiers_adresse_gdal_csv_vrt/.
+On pourra s'inspirer de l'article  
+https://static.geotribu.fr/articles/2021/2021-09-07_traiter_fichiers_adresse_gdal_csv_vrt/.
 
 
 _**Info**_ : dans certains cas, l'extension du fichier n'est pas fournie par le service web. VRT n'est alors pas capable de détecter le type de fichier et ça ne marche plus. Dans le cas bien particulier d'un CSV (ne marche pas pour d'autres extensions), on peut expliciter le format par la syntaxe suivante :
-`<SrcDataSource>CSV:/vsicurl/https://....</SrcDataSource>`. Noter le `CSV:` devant `vsicurl`
+`<SrcDataSource>CSV:/vsicurl/https://....</SrcDataSource>`.  
+Noter le **`CSV:`** devant `vsicurl`
 
 _**Votre donnée doit pouvoir s'afficher dans QGIS.**_
 

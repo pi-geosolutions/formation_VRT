@@ -16,6 +16,8 @@ Nous utiliserons la donnée de l'exercice 5.
 
 ### Déroulé
 #### Mise en route de cron
+\mbox{} 
+
 A défaut d'accéder à un serveur, on va activer temporairement cron sur votre instance WSL2. Dans une console linux : 
 
 ```
@@ -28,6 +30,8 @@ sudo service cron start
 Vous trouverez plein de docs sur crontab sur le net. Par exemple : https://www.linuxtricks.fr/wiki/cron-et-crontab-le-planificateur-de-taches. 
 
 #### Utilisation de cron
+\mbox{} 
+
 On va commencer par une tâche bêbête : créer un fichier et changer sa date de modif. Comme ça on saura si cron marche
 
 `crontab -e` pour éditer le ficher de config cron.
@@ -43,6 +47,8 @@ Attendons maintenant une minute, et le fichier devrait avoir été créé dans ~
 Attendez encore une minute ou deux, recommencez la commande ls, la date de modif du fichier doit avoir changé. Ca marche.
 
 #### Publication/mise à jour automatique de la donnée
+\mbox{} 
+
 Vous avez noté la commande utilisée pour la publication de l'exercice 5 ? Allez, on l'automatise.
 
 A savoir que cron ne sait pas tout. Pas tout ce qu'on sait. Il n'a pas accès à nos variables d'environnement. Le mot de passe postgresql par exemple. Et ne sait pas toujours où trouver les fichiers exécutables, en dehors de la base. On va donc lui faciliter la tâche : 
@@ -54,7 +60,7 @@ A savoir que cron ne sait pas tout. Pas tout ce qu'on sait. Il n'a pas accès à
 _**Faites un `crontab -l` et faites-en une copie d'écran, pour le livrable de cet exercice.**_
 
 
-Pouvez-vous pensez à d'autre scenari possibles/souhaitables ?
+Cela vous donne-t-il des idées de tâches de votre quotidien (pro) que vous pourriez automatiser ainsi ? On peut prendre un instant pour en discuter.
 
 ---
 

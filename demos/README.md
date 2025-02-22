@@ -24,12 +24,13 @@ Ils avaient passé plusieurs jours à trouver comment éviter les doublons. Je l
 En bonus, j’ai en commentaire dans le VRT l’ajout d’un champ texte avec concaténation, pour le Gers (hello). 
 
 On peut aussi rajouter le calcul de la surface totale par commune en hectares, pour montrer une opération geométrique 
+
 _-> note : contrairement à admin express, cette donnée contient déjà la surface, ainsi que les codes postaux._
 
 ### Déroulé
 J’explique le pb. On charge chaque commune dans QGIS. On regarde le chevauchement. On peut ajouter la couche des départements si on veut.
 
-On va voir la doc VRT, on regarde `OGRVRTUnionLayer`
+On va voir la doc VRT, on regarde `OGRVRTUnionLayer`.  
 Je charge le VRT, on constate que c’est clean.
 
 Je décommente hello et on regarde ça dans la table attributaire.
@@ -69,4 +70,4 @@ Je charge les tables de bdnv.vrt. On fait une jointure sur les codes postaux ave
 
 Ensuite, je rajoute une jointure sur 2020 dans le VRT et charger cette nouvelle table. Jointure à nouveau. Puis clic droit sur la couche codes_postaux, styles, ajouter. Ca va me copier le style par défaut. J’en profite pour les nommer par année. Et je change l’attribut utilisé pour le style.
 
-Ensuite, je décommente 2019. Je peux faire remarquer que là, je tape direct dans la ressource en ligne (utiliser ogr2vrt_simple pour choper l’adresse correcte). Et bis répétita.
+Ensuite, je décommente 2022. Je peux faire remarquer que là, je tape direct dans la ressource en ligne (utiliser ogr2vrt_simple pour choper l’adresse correcte). Et bis répétita.

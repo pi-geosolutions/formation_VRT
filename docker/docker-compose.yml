@@ -17,6 +17,7 @@ services:
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
       - cpgeom2024_postgis_data:/var/lib/postgresql/data
+      - ./pg_entrypoints.d:/docker-entrypoint-initdb.d
 
   # geoserver:
   #   image: docker.osgeo.org/geoserver:2.25.x

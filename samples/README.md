@@ -10,6 +10,6 @@ On peut :
 - les charger dans QGIS
 - les manipuler en ligne de commande :
   - lister les infos avec `ogrinfo -so -al`
-  - afficher le contenu au format CSV avec `ogr2ogr -f CSV /stdout/ monfichier.vrt`
+  - afficher le contenu au format CSV avec `ogr2ogr -f CSV /vsistdout/ monfichier.vrt`
 
 On pourra aussi regarder des VRTs sur https://github.com/geo2france/vrt.

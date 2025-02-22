@@ -15,9 +15,9 @@ On prendra https://www.data.gouv.fr/fr/datasets/liste-et-localisation-des-musees
 ### Déroulé
 L'idée est d'afficher les emplacements précis (points) des musées. Nous avons de la chance, ils nous fournissent les coordonnées (lat, lon).
 
-Configurez votre VRT pour en faire un fichier géospatial, utilisant les coordonnées fournies
+Configurez votre VRT pour en faire un fichier géospatial, utilisant les coordonnées fournies.
 
-La doc VRT vous donnerea les infos nécessaires : https://gdal.org/drivers/vector/vrt.html#example-odbc-point-layer
+La doc VRT vous donnera les infos nécessaires : https://gdal.org/drivers/vector/vrt.html#example-odbc-point-layer
 
 _**Pensez à déposer le fichier vrt, pour le livrable de cet exercice.**_
 
