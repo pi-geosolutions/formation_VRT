@@ -1,6 +1,7 @@
 #!/bin/bash
 
-pandoc -V geometry:margin=35mm -o formation_VRT.pdf README.md .latex/pagebreak.md \
+pandoc -V geometry:margin=25mm -V fontsize=11pt \
+  -o formation_VRT.pdf README.md .latex/pagebreak.md \
   ogr_et_vrt.md .latex/pagebreak.md  \
   demos/README.md .latex/pagebreak.md  \
   samples/README.md .latex/pagebreak.md  \
