@@ -1,7 +1,12 @@
 tmp/
+venv/
+ogr2vrt_venv/
 
 # We have zipped the data files, in order to reduce the git repo's size
 demos/union/
 demos/pesticides/
 
 exercices/geodata/geo.gpkg
+
+# Don't publicly provide this ;o)
+QCM.md

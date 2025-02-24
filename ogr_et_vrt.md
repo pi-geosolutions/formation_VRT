@@ -12,7 +12,7 @@
 ## VRT
 
 - Un format interne de GDAL/OGR
-- Plus connu pour sa version raster, mais existe aussi pour des données vectorielles et tabulaires : 
+- Plus connu pour sa version raster, mais **existe aussi pour des données vectorielles et tabulaires** : 
 - https://gdal.org/drivers/vector/vrt.html
 - OGR VRT, ça vous permet notamment de :
   - Faire l’économie d’un ETL
@@ -58,7 +58,7 @@ Pour créer votre fichier VRT, vous avez le choix. Vous pouvez :
 - L’écrire à la main, grâce à la doc (vite pénible)
 - Le générer via QGIS et l’extension Spreadsheet Layer : génère un fichier VRT à côté du fichier ouvert. Supporte XLS, XSLX, ODS, CSV
 - Le générer en ligne de commande via https://github.com/jeanpommier/ogr2vrt_simple
-- A partir de GDAL 3.6, un script ogr2vrt devrait être livré avec la librairie.
+- A partir de GDAL 3.6, un script ogr2vrt est livré avec la librairie, *mais il faut le trouver car il n'est pas mis en avant (et un chouilla limité à mon goût)*.
 
 # Quelques astuces avec OGR
 
@@ -88,13 +88,14 @@ ogrinfo -al -sql "SELECT * FROM tl_2013_us_uac10 WHERE UACE10 = '16171'" tl_2013
 
 On peut presque tout faire avec ogr2ogr. Voir [la doc](https://gdal.org/programs/ogr2ogr.html), c'est important.
 
-QQ commandes très fréquemment utilisées : 
+QQ commandes très fréquemment utilisées (par moi en tous cas) : 
 
 ### Afficher dans la console le contenu de la couche
 Pratique pour explorer le contenu d'une donnée
 ```
-ogr2ogr -f CSV /vsistdout/ monfichier.gpkg couche1
+ogr2ogr -f CSV /vsistdout/ monfichier.gpkg couche1 |more
 ```
+(`| more` ajoute la pagination : vos données sont affichées page par page, on fait défiler en appuyant sur espace. On quitte le mode pagination avec `q`)
 
 ### Publier une donnée en base (postgresql).
 

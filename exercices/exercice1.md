@@ -5,7 +5,7 @@
 > **Livrable attendu**
 >Sur cet exercice, je vous demanderai de faire une copie écran de votre carte finale et de la déposer sur digiforma. Pas de panique, on va le dérouler ensemble, mais suivez bien, et n'hésitez pas à poser des questions.
 >
->Nommage attendu : nom_exo1_subventions.png
+>Nommage attendu : nom_exo1_logvac.png
 
 ---
 
@@ -27,7 +27,7 @@ QGIS, avec l'extension Spreadsheet Layer installée
 
 Retouchez un peu le VRT si nécessaire pour le rendre plus compatible avec les contraintes d'une base de données (pas de caractères accentués, pas d'espace), puis le publier en base. Là aussi, vous avez le choix : le publier via QGIS et son database manager (lent) ou bien utiliser [ogr2ogr](./ogr.md)
 
-**On va aussi publier en BD les contours des communes dans le Gers** (prendre dans demos/union), pour pouvoir faire une jointure. On n'a pas encore vu les serveurs carto, donc on fera le rendu dans QGIS. Faites-nous une jolie carte mettant en évidence les communes les mieux dotés en logements sociaux.
+**On va aussi publier en BD les contours des communes dans le Gers** (prendre dans demos/union), pour pouvoir faire une jointure. On n'a pas encore vu les serveurs carto, donc on fera le rendu dans QGIS. Faites-nous une jolie carte mettant en évidence le taux de logements vacants par commune.
 
 _**Faites une copie d'écran de la carte obtenue, pour le livrable de cet exercice.**_
 
