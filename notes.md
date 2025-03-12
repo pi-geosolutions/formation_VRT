@@ -38,3 +38,5 @@ Pas eu le temps cette fois-ci (202502). Ne pas prendre trop mon temps au début.
 ## Connecteur BD en lecture
 Dylan (2025) m'a confirmé qu'on arrive bien à connnecter VRT à une BD postgres *en lecture*. C'est d'ailleurs, en fait, référencé dans la doc OGR. La syntaxe est `PG: postgresl_connection_string`. Donc un truc du genre `PG: dbname='cpgeom' username='cpgeom' hostname='localhost' password='secret'`
 
+## Tableur collaboratif 
+Remplacer google sheet by Grist, ça serait plus propre
