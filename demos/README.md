@@ -38,11 +38,15 @@ Je décommente hello et on regarde ça dans la table attributaire.
 
 
 ## Achat de produit phyto (glyphosate) par code postal
-### Source de données : 
-https://www.data.gouv.fr/fr/datasets/achats-de-pesticides-par-code-postal/
-https://www.data.gouv.fr/fr/datasets/codes-postaux-de-toulouse/
+### Sources de données : 
 
-Données dans pesticides/
+Données dans le dossier pesticides/
+
+On les retrouve en ligne : 
+
+- https://www.data.gouv.fr/fr/datasets/achats-de-pesticides-par-code-postal/
+- https://www.data.gouv.fr/fr/datasets/codes-postaux-de-toulouse/
+
 
 ### Objectif pédagogique
 

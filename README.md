@@ -5,7 +5,7 @@ _[IdGeo](https://www.idgeo.fr/), 23 février 2026_
 
 ---
 
-_Sources : https://github.com/pi-geosolutions/formation_VRT/tree/cpgeom202602_
+_Sources : [https://github.com/pi-geosolutions/formation_VRT/](https://github.com/pi-geosolutions/formation_VRT/tree/cpgeom202602)_
 
 ---
 
@@ -33,7 +33,7 @@ A noter que le format PDF n'est guère adapté aux copier-coller, en particulier
         - Que faites-vous si vous devez publier un ficher Excel ?
         - Et si le contenu de ce fichier devait être maintenu à jour dans une base de données ?
         - Comment assurez-vous la reproductibilité de vos process de publication ?
-1. [démos](demos/README.md)
+1. [Démos](demos/README.md)
 1. [Présentation rapide de la librairie GDAL/OGR et du format VRT](ogr_et_vrt.md)
 1. [Exploration de fichiers VRT](samples/README.md)
 1. [Exercices accompagnés : génération et usage de fichiers VRT](exercices/README.md)
