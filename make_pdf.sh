@@ -1,9 +1,9 @@
 #!/bin/bash
 
-pandoc -V geometry:margin=25mm -V fontsize=11pt \
+pandoc -f markdown  -V block-headings -V geometry:margin=25mm -V urlcolor=[HTML]{050377} -V fontsize=11pt \
   -o formation_VRT.pdf README.md .latex/pagebreak.md \
-  ogr_et_vrt.md .latex/pagebreak.md  \
   demos/README.md .latex/pagebreak.md  \
+  ogr_et_vrt.md .latex/pagebreak.md  \
   samples/README.md .latex/pagebreak.md  \
   exercices/README.md .latex/pagebreak.md  \
   exercices/exercice1.md .latex/pagebreak.md  \

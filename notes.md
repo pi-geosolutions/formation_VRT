@@ -40,3 +40,10 @@ Dylan (2025) m'a confirmé qu'on arrive bien à connnecter VRT à une BD postgre
 
 ## Tableur collaboratif 
 Remplacer google sheet by Grist, ça serait plus propre
+
+
+## Pandoc formatting
+
+Interesting discussions (e.g. having level 4 header displayed properly in the PDF):
+- https://stackoverflow.com/questions/21198025/pandoc-generation-of-pdf-from-markdown-4th-header-is-rendered-differently
+- https://pandoc.org/MANUAL.html#variables-for-latex
