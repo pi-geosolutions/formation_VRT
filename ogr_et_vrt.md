@@ -1,5 +1,7 @@
 
-# GDAL/OGR
+# Présentation rapide de la librairie GDAL/OGR et du format VRT
+
+## GDAL/OGR
 
 - https://gdal.org/
 - Une librairie *opensource*, largement utilisée (sous le capot) par de nombreux outils y compris propriétaires
@@ -8,6 +10,7 @@
 - Des outils en ligne de commande :
   - Support raster : [GDAL](https://gdal.org/programs/index.html#raster-programs)
   - Support Vecteur : [OGR](https://gdal.org/programs/index.html#vector-programs)
+  - A noter l'arrivée d'une refonte massive des commandes GDAL/OGR à partir de GDAL 3.12 : [application gdal](https://gdal.org/en/stable/programs/index.html#gdal-application)
 
 ## VRT
 
@@ -57,8 +60,8 @@ Pour créer votre fichier VRT, vous avez le choix. Vous pouvez :
 
 - L’écrire à la main, grâce à la doc (vite pénible)
 - Le générer via QGIS et l’extension Spreadsheet Layer : génère un fichier VRT à côté du fichier ouvert. Supporte XLS, XSLX, ODS, CSV
-- Le générer en ligne de commande via https://github.com/jeanpommier/ogr2vrt_simple
-- A partir de GDAL 3.6, un script ogr2vrt est livré avec la librairie, *mais il faut le trouver car il n'est pas mis en avant (et un chouilla limité à mon goût)*.
+- Le générer en ligne de commande via [ogr2vrt_simple](https://github.com/jeanpommier/ogr2vrt_simple)
+- Depuis GDAL 3.6, un script ogr2vrt est livré avec la librairie, *mais il faut le trouver car il n'est pas mis en avant (et un chouilla limité à mon goût)*.
 
 # Quelques astuces avec OGR
 
@@ -73,7 +76,7 @@ ogrinfo -so -al macouche.gpkg
 ```
 marche bien
 
-L'air de rien, ça vous permet de récupérer pas mal d'infos, sans avoir à ouvrir QGIS, charger la couche, ouvrir les propriétés etc
+L'air de rien, ça vous permet de récupérer pas mal d'infos, sans avoir à ouvrir QGIS, charger la couche, ouvrir les propriétés etc : ouvrez une ligne de commande, et vous pouvez inspecter votre donnée, après chaque changement, facilement, sans toucher la souris.
 
 ### Exécuter des commandes sql
 On peut aussi exécuter des commandes SQL sur une couche de données. Par exemple, un truc du genre : 
@@ -93,13 +96,13 @@ QQ commandes très fréquemment utilisées (par moi en tous cas) :
 ### Afficher dans la console le contenu de la couche
 Pratique pour explorer le contenu d'une donnée
 ```
-ogr2ogr -f CSV /vsistdout/ monfichier.gpkg couche1 |more
+ogr2ogr -f CSV /vsistdout/ monfichier.gpkg couche1 | more
 ```
 (`| more` ajoute la pagination : vos données sont affichées page par page, on fait défiler en appuyant sur espace. On quitte le mode pagination avec `q`)
 
 ### Publier une donnée en base (postgresql).
 
-Pour alléger la ligne de commande, j'utilise des variables d'environnement pour déclarer les paramètres de connexion. Je ne les ai pas nommées au hasard. Pour que psql et ogr les reconnaissent, il faut suivre une convention. Cf. https://docs.postgresql.fr/15/libpq-envars.html.
+Pour alléger la ligne de commande, j'utilise des variables d'environnement pour déclarer les paramètres de connexion. Je ne les ai pas nommées au hasard. Pour que psql et ogr les reconnaissent, il faut suivre une convention. Cf. [la doc libPQ](https://docs.postgresql.fr/15/libpq-envars.html).
 
 Il suffit de les déclarer une fois tant qu'on ne change pas de console (sinon on doit recommencer)
 
@@ -112,11 +115,11 @@ export PGUSER=cpgeom
 export PGHOST=localhost
 ```
 
-On aurait aussi pu écrire un fichier .pgpass comme documenté dans https://docs.postgresql.fr/10/libpq-pgpass.html.
+On aurait aussi pu écrire un fichier .pgpass comme documenté dans [la doc libPQ](https://docs.postgresql.fr/15/libpq-pgpass.html).
 
 ```
-ogr2ogr -progress -f PostgreSQL PG:"host='$PGHOST' user='$PGUSER' dbname='$PGDATABASE'" \ 
-  -nln "roads" -nlt PROMOTE_TO_MULTI -lco OVERWRITE=YES \
+ogr2ogr -f PostgreSQL PG:"host='$PGHOST' user='$PGUSER' dbname='$PGDATABASE'" \ 
+  -progress -nln "roads" -nlt PROMOTE_TO_MULTI -lco OVERWRITE=YES \
   -lco SCHEMA=destschema monfichier.gpkg couche1
 ```
 
