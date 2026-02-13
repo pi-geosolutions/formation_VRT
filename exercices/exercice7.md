@@ -16,7 +16,6 @@ Nous utiliserons la donnée de l'exercice 5.
 
 ### Déroulé
 #### Mise en route de cron
-\mbox{} 
 
 A défaut d'accéder à un serveur, on va activer temporairement cron sur votre instance WSL2. Dans une console linux : 
 
@@ -30,7 +29,6 @@ sudo service cron start
 Vous trouverez plein de docs sur crontab sur le net. Par exemple : https://www.linuxtricks.fr/wiki/cron-et-crontab-le-planificateur-de-taches. 
 
 #### Utilisation de cron
-\mbox{} 
 
 On va commencer par une tâche bêbête : créer un fichier et changer sa date de modif. Comme ça on saura si cron marche
 
@@ -47,7 +45,6 @@ Attendons maintenant une minute, et le fichier devrait avoir été créé dans ~
 Attendez encore une minute ou deux, recommencez la commande ls, la date de modif du fichier doit avoir changé. Ca marche.
 
 #### Publication/mise à jour automatique de la donnée
-\mbox{} 
 
 Vous avez noté la commande utilisée pour la publication de l'exercice 5 ? Allez, on l'automatise.
 

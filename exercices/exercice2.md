@@ -1,15 +1,14 @@
 ## Exercice 2 : filtrer le contenu à publier
 
-On va publier une carte montrant la proportion occupée par la production agricole bio par rapport à la surface totale, pour chaque commune du Gers, en 2020.
+On va s'intéresser aux surfaces bio et en conversion, pour chaque commune du Gers, en 2020.
 
 ### Sources de données
 
-Téléchargez le fichier https://www.data.gouv.fr/fr/datasets/surfaces-cheptels-et-nombre-doperateurs-bio-a-la-commune/. 
+Téléchargez le fichier des données communales certifiées fourni par l'[Agence Bio sur datagouv](https://www.data.gouv.fr/fr/datasets/surfaces-cheptels-et-nombre-doperateurs-bio-a-la-commune/). 
 
 ### Déroulé
 
-#### ogr2vrt_simple
-\mbox{}
+#### ogr2vrt_simple 
 
 On va installer le script [ogr2vrt_simple](https://github.com/jeanpommier/ogr2vrt_simple).
 
@@ -29,16 +28,17 @@ Windows ne nous facilite pas trop la vie pour le code python, surtout avec les b
 https://github.com/jeanpommier/ogr2vrt_simple
 
 #### Générer le VRT
-\mbox{}
 
-Utilisez la même commande pour générer votre VRT pour la donnée bio. Puis éditez-le dans un éditeur de texte.
+Utilisez ogr2vrt_simple pour générer votre VRT pour la donnée bio. Puis éditez-le dans un éditeur de texte.
 
 - Première étape : on filtre les entrées pour ne garder que les données sur le Gers (32). On utilisera une source SrcSql pour cela
 - Deuxième étape : ne garde que les colonnes liées à 2020
+- Troisème étape : on rajoute une colonne donnant le pourcentage de surface en conversion par rapport à la surface bio totale
 - On vérifie bien le résultat
-- Et puis on publie en base
-- puis jointure avec les limites administratives du Gers (on pourra prendre la couche geo dans  [../demos/union/communes3247.vrt](../demos/union/communes3247.vrt) )
-- et affichage carto
+- Puis on pourrait 
+    - publier en base, 
+    - joindre avec les limites administratives du Gers (on pourra prendre la couche geo dans  [../demos/union/communes3247.vrt](../demos/union/communes3247.vrt) )
+    - et affichage carto
 
 
 ---
