@@ -12,7 +12,7 @@ Exercices :
  - [`Livrable attendu`] [Exercice 4 : un fichier tabulaire avec coordonnées lat/lon](exercice4.md)
  - [Exercice 5 : prendre un fichier distant pour source](exercice5.md)
  - [Exercice 6 : union de jeux de données](exercice6.md)
- - [`Livrable attendu`] [Exercice 7 :  on automatise](exercice7.md)
+ - [Exercice 7 :  on automatise](exercice7.md)
  - [Exercice 8 : faisons une 'appli' basique de crowdsourcing](exercice8.md)
  -  Exercice 9... 
  ah, ben, y'en a plus

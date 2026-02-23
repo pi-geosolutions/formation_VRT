@@ -1,13 +1,5 @@
 ## Exercice 7 :  on automatise
 
----
-
-> Livrable attendu
-> Sur cet exercice, je vous demanderai de faire une copie écran de votre tâche cron.
->
-> Nommage attendu : nom_exo7_crontab.png
-
----
 
 Il y a plein de façons d'automatiser un flux de publication. Nous allons rester sur un cas de figure assez simple : actualisation régulière d'une donnée via une tâche planifiée (crontab) sur un serveur linux.
 
